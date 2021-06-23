@@ -7,7 +7,7 @@ const userInfo = {
 };
 
 const App = () => {
-  return <Comment user={userInfo} text="Good job!" date={new Date()} />;
+  return <Comment author={userInfo} text="Good job!" date={new Date()} />;
 };
 
 export default App;
