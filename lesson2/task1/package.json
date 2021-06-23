@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack-dev-server -d --devtool eval-source-map --open",
-    "stabuildrt": "webpack -p"
+    "build": "webpack -p"
   },
   "keywords": [],
   "author": "",
