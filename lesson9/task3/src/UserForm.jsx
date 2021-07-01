@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class UserForm extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   handleSubmit = event => {
     event.preventDefault();
 
@@ -12,7 +16,7 @@ class UserForm extends Component {
       {},
     );
 
-    console.log(formData);
+    this.props.onSubmit(formData);
   };
 
   setRef = node => {
