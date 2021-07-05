@@ -5,4 +5,4 @@ import Page from './App.jsx';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<Page userId="facebook" />, rootElement);
+ReactDOM.render(<Page userId="github" />, rootElement);
