@@ -1,11 +1,10 @@
 import React from 'react';
-import BoilingVerdict from './BoilingVerdict.jsx';
 import TemperatureInput from './TemperatureInput.jsx';
+import BoilingVerdict from './BoilingVerdict.jsx';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       temperature: '',
       scale: 'c',
@@ -31,25 +30,19 @@ class Calculator extends React.Component {
   };
 
   handleCelsiusChange = temperature => {
-    this.setState({
-      scale: 'c',
-      temperature,
-    });
+    this.setState({ scale: 'c', temperature });
   };
 
   handleFahrenheitChange = temperature => {
-    this.setState({
-      scale: 'f',
-      temperature,
-    });
+    this.setState({ scale: 'f', temperature });
   };
 
   render() {
-    const scale = this.state.scale;
     const temperature = this.state.temperature;
-    const celsius = scale === 'f' ? this.tryConvert(temperature, this.toCelsius) : temperature;
+    const celsius =
+      this.state.scale === 'f' ? this.tryConvert(temperature, this.toCelsius) : temperature;
     const fahrenheit =
-      scale === 'c' ? this.tryConvert(temperature, this.toFahrenheit) : temperature;
+      this.state.scale === 'c' ? this.tryConvert(temperature, this.toFahrenheit) : temperature;
 
     return (
       <div>
