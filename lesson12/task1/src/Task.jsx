@@ -17,4 +17,10 @@ const Task = ({ id, done, text, onChange, onDelete }) => {
   );
 };
 
+Task.propTypes = {
+  id: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  done: PropTypes.bool.isRequired,
+};
+
 export default Task;
