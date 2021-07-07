@@ -31,7 +31,7 @@ export const updateTask = (taskId, taskData) => {
     body: JSON.stringify(taskData),
   }).then(response => {
     if (!response.ok) {
-      throw new Error('Failed to create task');
+      throw new Error('Failed to update task');
     }
   });
 };
