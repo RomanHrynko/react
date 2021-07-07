@@ -36,8 +36,3 @@ class CreateTaskInput extends Component {
 }
 
 export default CreateTaskInput;
-
-// Algo:
-// 1. Take text from input
-// 2. Createtask with text
-// 3. Add created task to the list
