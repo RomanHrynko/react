@@ -27,7 +27,11 @@ class UsersList extends Component {
 
     return (
       <div>
-        <Filter onChange={this.handleChange} />
+        <Filter
+          filterText={this.state.value}
+          count={filterUsersList.length}
+          onChange={this.handleChange}
+        />
         <ul className="users">
           {filterUsersList.map(user => (
             <User key={user.id} {...user} />
