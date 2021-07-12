@@ -3,15 +3,15 @@ import React, { useEffect, useState } from 'react';
 const ConnectionStatus = () => {
   const [status, setStatus] = useState(true);
 
+  const onlineStatusHandler = () => {
+    setStatus(true);
+  };
+
+  const offlineStatusHandler = () => {
+    setStatus(false);
+  };
+
   useEffect(() => {
-    const onlineStatusHandler = () => {
-      setStatus(true);
-    };
-
-    const offlineStatusHandler = () => {
-      setStatus(false);
-    };
-
     window.addEventListener('online', onlineStatusHandler);
     window.addEventListener('offline', offlineStatusHandler);
 
@@ -22,9 +22,9 @@ const ConnectionStatus = () => {
   }, []);
 
   return status ? (
-    <div className="status">Online</div>
+    <div className="status">online</div>
   ) : (
-    <div className="status status_offline">Offline</div>
+    <div className="status status_offline">offline</div>
   );
 };
 
