@@ -18,7 +18,7 @@ const User = ({ match }) => {
       .then(userData => {
         setUserData(userData);
       });
-  }, [match.params.userId]);
+  }, [userId]);
 
   if (!userData) {
     return null;
